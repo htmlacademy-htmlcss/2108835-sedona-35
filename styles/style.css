@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
     src: url(../fonts/ptsans-400.woff2) format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
     src: url(../fonts/ptsans-700.woff2) format("woff2");
@@ -23,16 +23,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", sans-serif, Arial;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color:#ffffff ;
+  background-color: #ffffff;
 }
 
-.main-container {
-  flex-grow: 1;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .page-container {
@@ -69,9 +76,12 @@ body {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 420px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-user {
@@ -80,6 +90,8 @@ body {
 }
 
 .navigation-link {
+  padding: 20px 16px;
+  display: block;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 24px;
@@ -90,6 +102,26 @@ body {
   text-transform: capitalize;
 }
 
+.navigation-link .navigation-user {
+  min-width: 18px;
+  min-height: 17px;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+/* не могу понять как мне вставить здесь этот background-image */
+.welcome-to-sedona {
+  background-image: url("/images/main/main-backgroudn.jpg");
+  background-size: 1200px 485px;
+  background-repeat: no-repeat;
+}
+
+.reasons {
+  background-color: #ffffff;
+}
+
 .main-index h2,
 .main-index p {
   text-align: center;
@@ -98,6 +130,7 @@ body {
 .advantages-list{
   margin: 0;
   padding: 0;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
@@ -114,6 +147,11 @@ body {
   height: 384px;
 }
 
+.advantages-title {
+  margin-top: 103px;
+  margin-bottom: 62px;
+}
+
 .advantages-discription {
   font-family: "PT Sans", sans-serif;
   font-style:normal;
@@ -122,11 +160,13 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: none;
+  margin: 0 85px;
 }
 
 .services-list{
   margin: 0;
   padding: 0;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
  }
@@ -143,6 +183,16 @@ body {
   height: 384px;
 }
 
+.services-image {
+  margin-top: 80px;
+}
+
+.services-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+
+
 .services-discription {
   font-family: "PT Sans", sans-serif;
   font-style:normal;
@@ -151,6 +201,7 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: none;
+  margin: 0 85px;
 }
 
 .real-town,
@@ -228,12 +279,24 @@ body {
 }
 
 .footer-social{
+  display: flex;
+  flex-wrap: wrap;
   width: 162px;
+  margin-right: 27px;
   padding-left: 70px;
   padding-right: 42px;
 }
 
+.footer-social-list {
+  list-style-type: none;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .footer-contacts {
+  margin-top: 45px;
   max-width: 720px;
   margin-left: 250px;
   margin-right: 236px;
@@ -262,6 +325,7 @@ body {
 
 .inner-header-title {
   margin: 0 70px;
+  padding-top: 35px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -269,27 +333,30 @@ body {
 }
 
 .breadcrumbs {
+  display: flex;
+  padding: 0;
   margin: 0 70px;
-  color: rgb(253, 253, 253) ;
+  color: rgb(253, 253, 253);
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
   color: inherit;
+  margin-right: 29px;
 }
 
 .inner-header {
   background-image: url(../images/catalog/background-catalog.jpg);
-  background-size: 1200px 415px;
   background-repeat: no-repeat;
 }
 
 .catalog-products {
   margin: 0 70px;
-  display: flex;
 }
 
 .catalog-filter {
   max-width: 1060px;
+  display: flex;
 }
 
 .catalog-filter-title {
@@ -314,18 +381,24 @@ body {
   display: flex;
   max-width: 1060px;
   margin: 0 70px;
+  margin-top: 50px;
 }
 
 .result-title {
   max-width: 338px;
   margin-right: 200px;
+  margin-bottom: 67px;
 }
 
 .select-control {
+  margin-left: 200px;
   margin-right: 70px;
 }
 
-.button-display {}
+.button-display {
+  display: flex;
+  margin-left: ;
+}
 
 .product-card {
   background-color: #ffffff;
@@ -372,6 +445,10 @@ body {
 }
 
 .pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   background-color: #ffffff;
   color: #000000;
   font-weight: 700;
@@ -380,7 +457,17 @@ body {
   text-transform: uppercase;
 }
 
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 11.36px;
   color: inherit;
   text-decoration: none;
   background-color: #82B3D3;
