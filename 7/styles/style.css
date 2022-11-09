@@ -1,0 +1,1247 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/ptsans-400.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/ptsans-700.woff2) format("woff2");
+    font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", arial , sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align:center;
+  text-decoration: none;
+  text-transform:uppercase;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+.button-light {
+  color:#000000;
+  background-color: #ffffff;
+}
+
+.page-header {
+    color:#000000;
+    background:#ffffff;
+}
+
+
+.logo {
+  z-index: 10;
+  margin-right: 28px;
+}
+
+.navigation-item {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 70px;
+  padding-left: 70px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-menu {
+  display: flex;
+  width: 700px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 19px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation-user {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.user-menu-item {
+  min-height: 25px;
+  min-width: 25px;
+}
+
+
+/* оно съезжает не поймиу почему */
+.new-favorites {
+  position: relative;
+  bottom: 10px;
+  left: 2px;
+  padding: 4px 5px 3px 4px;
+  font-weight: 400;
+  font-size: 10px;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  border-radius: 50%;
+}
+
+.button-want {
+  padding: 8px 34px;
+  display: block;
+  font-family: 'PT Sans', arial , sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  border-style: none;
+}
+
+.heart {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.navigation-searh {
+  position: relative;
+  padding: 18px 24px 24px 20px;
+}
+
+.navigation-favorites {
+  position: relative;
+  padding: 18px 5px 24px 18px;
+  margin-right: 21px;
+  text-decoration: none;
+}
+
+
+.navigation-link {
+  position: relative;
+  padding: 20px 16px;
+  display: block;
+  font-family: "PT Sans", arial , sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 15px 0 16px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
+.navigation-favorites {
+  text-decoration: none;
+}
+
+/* все виды кнопок */
+
+.button-brown {
+  background-color: #756157;
+}
+
+.button-brown:hover {
+  background-color: #615048;
+  cursor: pointer;
+}
+
+.button-brown:focus-visible {
+  outline: 0;
+  background-color: #615048;
+}
+
+.button-brown:active {
+  color: #FFFFFF30;
+  background-color: #756157;
+}
+
+.button-brown:disabled {
+  background-color: #E5E5E5;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-blue:hover {
+  background-color: #68A2CA;
+  cursor: pointer;
+}
+
+.button-blue:active {
+  color: #FFFFFF30;
+  background-color: #82B3D3;
+}
+
+.button-blue:focus-visible {
+  outline: 0;
+  background-color: #68A2CA;
+}
+
+.button-blue:disabled {
+  background-color: #E5E5E5;
+}
+
+.main-container {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.main-inner {
+  flex-grow: 1;
+  margin-top: -10px;
+}
+
+.main-logo-container {
+  width: 100%;
+  height: 485px;
+  margin-top: -10px;
+  text-align: center;
+  background: url("../images/main/niz-hero.png") bottom no-repeat, url("../images/main/main-backgroudn.jpg");
+  margin-top: -10px;
+  background-color: #9db2cd;
+}
+
+.main-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 51px;
+}
+
+.description-container {
+  padding: 69px 20px 89px 20px;
+}
+
+.description-title {
+  min-height: 72px;
+  margin: 0 0 24px 0;
+  line-height: 36px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.description-paragraph {
+  margin: 0;
+  font-weight: 400;
+  font-size: 22px;
+  color: #333333;
+}
+
+.advantages-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-items {
+  font-family: "PT Sans", arial , sans-serif;
+  font-style:normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 400px;
+  height: 384px;
+}
+
+.advantages-title {
+  margin-top: 103px;
+  margin-bottom: 62px;
+}
+
+/* эти полоски тоже не получается сделать почему-то, я уже все попробовал.... */
+.advantages-title::before {
+  position: absolute;
+  bottom: 30px;
+  width: 60px;
+  height: 2px;
+  color: rgba(255, 255, 255, 0.3);
+  content: "";
+}
+
+.advantages-discription {
+  font-family: "PT Sans", arial , sans-serif;
+  font-style:normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: none;
+  margin: 0 85px;
+}
+
+.services-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+.services-items {
+  font-family: "PT Sans", arial , sans-serif;
+  font-style:normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 400px;
+  height: 384px;
+}
+
+.services-image {
+  margin-top: 80px;
+}
+
+.services-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+
+
+.services-discription {
+  font-family: "PT Sans", arial , sans-serif;
+  font-style:normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: none;
+  margin: 0 85px;
+}
+
+.real-town,
+.devils-bridge {
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+
+.small-area,
+.few-tourists {
+  color: #000000;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.beautiful-road,
+.residence,
+.gifts {
+  color:#000000;
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.search-hotel {
+  padding: 100px 304px 96px;
+  line-height: 36px;
+  font-family: 'PT Sans', arial , sans-serif;
+  font-weight: 700;
+}
+
+.button-search-hotel {
+  display: inline-block;
+  padding: 8px 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 4px;
+  border-style: none;
+}
+
+.search-hotel-text {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 30px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.search-hotel-description {
+  margin: 0;
+  margin-bottom: 54px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+  font-size: 22px;
+}
+
+.subscribe {
+  padding: 96px 258px 104px;
+  color: #ffffff;
+  font-family: "PT Sans", arial , sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.index-subscribe {
+  background-image: url(/images/main/subscribe.jpg);
+  background-size: 1200px 415px;
+  background-repeat:no-repeat;
+  background-color:#a1abab ;
+}
+
+.catalog-subscribe {
+  color: #000000;
+}
+
+.subscribe-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.subscribe-paragraph {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: none;
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.subscribe-form {
+  display: flex;
+  width: 684px;
+}
+
+.subscribe-input {
+  width: 413px;
+  height: 14px;
+  padding: 19px;
+  padding-left: 20px;
+  font-family: 'PT Sans', arial , sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  outline: #FFFFFF;
+  background-color: #F2F2F2;
+  border-style: none;
+}
+
+.subscribe-input:disabled{
+  background-color: #e5e5e5e1;
+}
+
+.subscription-button {
+  padding: 8px 50px;
+  /* этот паддинг почему-то не подключается на главной странице, хотя я уже все попробовал.
+  он наследует от button {таблица стилей агента пользователя} я не знаю как быть.... */
+  font-family: 'PT Sans', arial , sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  border-style: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 69px 30px 70px;
+  flex-wrap: wrap;
+}
+
+.footer-social-list{
+  display: flex;
+  max-width: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.social-link {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 40px;
+}
+
+.social-link:focus-visible {
+  outline: 0;
+}
+
+.social-link:focus-visible svg {
+  fill: #68A2CA;
+}
+
+.social-vk {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
+}
+
+.social-vk:hover {
+  fill: #68A2CA;
+}
+
+.social-vk:active {
+  fill: #68A2CA4D;
+}
+
+.social-telegram {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 1px;
+  margin: auto;
+  fill: #83B3D3;
+}
+
+.social-telegram:hover {
+  fill: #68A2CA;
+}
+
+.social-telegram:active {
+  fill: #68A2CA4D;
+}
+
+.social-youtube {
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  right: 0;
+  left: 2px;
+  margin: auto;
+  fill: #83B3D3;
+}
+
+.social-youtube:hover {
+  fill: #68A2CA;
+}
+
+.social-youtube:active {
+  fill: #68A2CA4D;
+}
+
+.footer-social-list {
+  list-style-type: none;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.footer-contacts-phone {
+  font-family: "PT Sans", arial , sans-serif;
+  font-style: normal;
+  line-height: 36px;
+  position: relative;
+  left: 1px;
+  bottom: 1px;
+  font-weight: 400;
+  font-size: 40px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-contact-phone:hover {
+  color: #756157;
+}
+
+.footer-contact-phone:focus-visible {
+  outline: 0;
+  color: #756157;
+}
+
+.footer-contact-phone:active {
+  color: #7561574D;
+}
+
+.footer-logo {
+  position: relative;
+  right: 1px;
+  top: 1px;
+}
+
+.copyright-htmlacademy:hover path {
+  fill: #756157;
+}
+
+.footer-html-logo:focus-visible {
+  outline: 0;
+}
+
+.footer-html-logo:focus-visible path {
+  fill: #756157;
+}
+
+.copyright-htmlacademy:active path {
+  fill: #7561574D;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  margin-bottom: 41px;
+  padding: 0;
+  color: #FFFFFF;
+  background-image: url("../images/catalog/arrow.svg");
+  background-position: 23px 5px;
+  background-repeat: no-repeat;
+  list-style-type: none;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.breadcrumbs-hotels:disabled{
+  color:inherit;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+}
+
+breadcrumbs-link:hover {
+  color: #FFFFFF99;
+  cursor: pointer;
+}
+
+.breadcrumbs-link:hover path {
+  fill: #FFFFFF99;
+}
+
+.breadcrumbs-link:focus-visible {
+  outline: none;
+}
+
+.breadcrumbs-link:active {
+  color: #FFFFFF4D;
+}
+
+.breadcrumbs-link:active path {
+  fill: #FFFFFF4D;
+}
+
+ .inner-header {
+  padding: 35px 70px 70px;
+  color: #FFFFFF;
+  background-image: url(../images/catalog/background-catalog.jpg);
+  background-color: #6c7177;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: start;
+}
+
+
+.inner-header-title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  color:#ffffff
+}
+
+.catalog-products {
+  margin: 0 70px;
+}
+
+.catalog-filter {
+  max-width: 1060px;
+  display: flex;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.control {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3px;
+}
+
+.catalog-filter-group-infra {
+  margin-right: 70px;
+  list-style-type: none;
+}
+
+.catalog-filter-group-radio {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  margin-right: 140px;
+  padding: 0;
+}
+
+.control-input[type=radio] {
+  margin: 0;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-title {
+  padding: 0;
+  margin-bottom: 32px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.catalog-filter-item {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.control {
+  position: relative;
+  cursor: pointer;
+}
+
+.control-label {
+  padding-left: 16px;
+}
+
+/* Состояния чекбоксов */
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url("../images/icons/checked-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: 4px 6px;
+
+}
+
+.control-input:hover + .control-mark,
+.control-label:hover {
+  opacity: 0.6;
+}
+
+.control-input:focus-visible + .control-mark {
+  outline: 3px #83B3D3 solid;
+}
+
+.control-input:active + .control-mark,
+.control-label:active {
+  opacity: 0.3;
+}
+
+.control-input:disabled + .control-mark,
+.control-input:disabled + .control-mark + .control-label {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Радио */
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+/* Состояния радио */
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: #3F5E72;
+  content: "";
+}
+
+/* Рейндж */
+
+.range-scale {
+  position: relative;
+
+  height: 4px;
+  width: 287px;
+
+  background-color: #FFFFFF49;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 62px 21px 70px;
+  line-height: 50px;
+}
+
+.result-hotels{
+  display: flex;
+  gap: 30px;
+}
+
+.result-title {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+
+
+.select-control {
+  width: 292px;
+  height: 49px;
+  padding-left: 18px;
+  padding-right: 48px;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color:#333333;
+  border: 2px #E5E5E5 solid;
+  border-radius: 4px;
+  background-image: url("../images/icons/arrow-select.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  appearance: none;
+}
+
+.select-control:hover {
+  border-color: #68A2CA;
+}
+
+.select-control:focus-visible {
+  outline: 0;
+  border-color: #68A2CA;
+}
+
+.select-control:active {
+  border-color: #3F5E72;
+}
+
+.select-control:disabled {
+  border-color: #000000;
+  opacity: 0.3;
+}
+
+.type-of-catalog {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+}
+
+.type-of-catalog-link-image {
+  padding: 15px 14px 15px 14px;
+  margin-right: 8px;
+
+  border: 2px #E5E5E5 solid;
+  border-radius: 4px;
+}
+
+.type-of-catalog-link-image:hover {
+  border: 2px #000000 solid;
+}
+
+.type-of-catalog-link:focus-visible {
+  outline: 0;
+}
+
+.type-of-catalog-link:focus-visible svg{
+  border: 2px #68A2CA solid;
+}
+
+.type-of-catalog-link-image:active {
+  border: 2px #000000 solid;
+}
+
+.type-of-catalog-link-image:last-child {
+  margin-right: 0;
+}
+
+.type-of-catalog-link-image.active {
+  border-color: #000000;
+}
+
+.filter-form-button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+}
+
+.button-display {
+  display: flex;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 20px;
+  padding-inline-start: 0;
+  margin: 0;
+  padding: 0 71px 39px 69px;
+}
+
+.product-card {
+  width: 300px;
+  padding: 20px;
+  border: 1px #E6E6E6 solid;
+  border-radius: 4px;
+  list-style-type: none;
+}
+
+.product-card-link {
+  text-decoration: none;
+  color: black;
+}
+
+.product-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: inherit;
+  margin-top: 11px;
+  margin-bottom: 13px;
+}
+
+.product-card-wrapper-information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.product-card-type {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+
+.product-card-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.product-card-wrapper-button {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.product-card-details-link {
+  display: block;
+  padding: 8px 26px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 4px;
+  border-style: none;
+}
+
+.product-card-button {
+  padding: 8px 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.product-card-button.active {
+  padding: 8px 18px;
+  background-color: #7DB54F;
+}
+
+.product-card-button.active:hover {
+  background-color: #6C9E42;
+  cursor: pointer;
+}
+
+.product-card-button.active:focus-visible {
+  outline: 0;
+  background-color: #6C9E42;
+}
+
+.product-card-button.active:active {
+  background-color: #7DB54F;
+  color: #FFFFFF30;
+}
+
+.product-card-button.active:disabled {
+  background-color: #E5E5E5;
+}
+
+.product-card-rating {
+  padding: 9px 22px 8px 23px;
+
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.product-card-wrapper-raiting {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  height: 37px
+}
+
+.product-card-stars {
+  min-width: 91px;
+  height: 17px;
+  font-size: 0;
+  align-self: center;
+  background-image: url("../images/hotels/stars.svg");
+  background-size: 19px;
+  background-repeat: space;
+}
+
+.product-card-stars.three-stars {
+  min-width: 67px;
+}
+
+.product-card-stars.two-stars {
+  min-width: 44px;
+}
+
+.pagination {
+  position: relative;
+  left: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 40px 71px 60px 69px;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+/* не совсем понял как сделать этим 3 точки...*/
+.pagination::after{
+  flex-grow: 1;
+  margin-right: 30px;
+  margin-left: 30px;
+  content: "";
+}
+
+.pagination::before {
+  position: absolute;
+  transform: translateY(-40px);
+  width: 1060px;
+  border-bottom: 1px #E6E6E6 solid;
+  content: "";
+}
+
+.pagination-link {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #82B3D3;
+  display: inline-block;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 60px;
+  border-radius: 4px;
+}
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+  outline: 1px #82B3D3 solid;
+}
+
+.pagination-link:focus-visible {
+  background-color: #68A2CA;
+  outline: 1px #82B3D3 solid;
+  outline-offset: 0;
+}
+
+.pagination-link:active {
+  color: #FFFFFF30;
+}
+
+.pagination-link.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-link.pagination-current:hover {
+  outline: 0;
+  cursor: initial;
+}
+
+.pagination-link.pagination-current:focus-visible {
+  outline: 0;
+}
+
+.pagination-link.pagination-current:active {
+  outline: 0;
+}
+
+.pagination-link.pagination-light {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.pagination-link.pagination-light:hover {
+  outline: 0;
+  cursor: initial;
+}
+
+.pagination-link.pagination-light:focus-visible {
+  outline: 0;
+}
+
+.pagination-link.pagination-light:active {
+  outline: 0;
+}
+
+
+.catalog-mailing-list {
+  color: #000000;
+}
