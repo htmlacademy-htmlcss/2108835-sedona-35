@@ -9,7 +9,6 @@
   <div class="page-container">
     <header>
       <nav class="navigation">
-        <div class="main-menu">
           <a class="logo-link">
             <img class="logo" src="images/header/sedona-logo.svg" width="140" height="70" alt="Логотип Седона.">
           </a>
@@ -24,27 +23,34 @@
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-        </div>
         <ul class="user-menu">
           <li class="user-menu-item">
-            <a class="navigation-searh" href="#">
+                        <li class="navigation-user-item">
+              <a class="navigation-link-search" href="#">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            <!--<a class="navigation-search" href="#">
               <svg class="search" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.5 18.0083L15.8 14.3287C16.8 13.0359 17.5 11.3453 17.5 9.4558C17.5 5.08011 13.9 1.5 9.5 1.5C5.1
                 1.5 1.5 5.17956 1.5 9.55525C1.5 13.9309 5.1 17.511 9.5 17.511C11.3 17.511 13 16.9144 14.4 15.8204L18.1 19.5L19.5
                 18.0083ZM9.5 15.5221C6.2 15.5221 3.5 12.837 3.5 9.55525C3.5 6.27348 6.2 3.5884 9.5 3.5884C12.8 3.5884 15.5 6.27348
                 15.5 9.55525C15.5 12.837 12.8 15.5221 9.5 15.5221Z"/>
                 </svg>
-            </a>
+            </a>-->
           </li>
           <li class="user-menu-item">
-            <a class="navigation-favorites" href="#">
-              <svg class="heart" aria-hidden="true" focusable="false" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" >
+            <a class="navigation-link-like" href="#">
+              <span class="visually-hidden">Лайк</span>
+              <span class="new-favorites">12</span>
+            </a>
+            <!--<a class="navigation-favorites" href="#">
+               <svg class="heart" aria-hidden="true" focusable="false" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" >
                 <path d="M8.9 17c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C.4 7.8 0 6.6 0 5.4 0 2.4 2.4 0 5.5 0 6.8 0 8
                 .5 9 1.3 10 .5 11.3 0 12.5 0c3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4
                 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3
                 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg>
               <span class="new-favorites">12</span>
-            </a>
+            </a>-->
           </li>
           <li class="user-menu-item">
             <a class="button-want button-brown" href="#">Хочу сюда!</a>
@@ -100,22 +106,22 @@
         </div>
           <ul class="advantages-item">
             <li class="advantages-white light-blue">
-              <div class="services-item-image">
-                <img class="services-image" src="images/main/house.svg">
+              <div class="services-item-image services-item-image-house">
+                <span class="house"></span>
               </div>
               <h3 class="advantages-title house">Жилье</h3>
               <p class="advantages-description last">Рекомендуем пожить<br>в настоящем мотеле,<br> всё как в кино!</p>
             </li>
             <li class="advantages-white">
-              <div class="services-item-image">
-                <img class="services-image" src="images/main/food .svg">
+              <div class="services-item-image services-item-image-food">
+                <span class="food"></span>
               </div>
               <h3 class="advantages-title food">Еда</h3>
               <p class="advantages-description last">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
             </li>
             <li class="advantages-white light-blue">
-              <div class="services-item-image">
-                <img class="services-image" src="images/main/souvenirs.svg">
+              <div class="services-item-image services-item-image-souvenirs">
+                <span class="souvenirs"></span>
               </div>
               <h3 class="advantages-title gift">Сувениры</h3>
               <p class="advantages-description last">Не только китайского,<br>но и настоящего местного<br>производства!</p>
@@ -125,8 +131,8 @@
 
       <section class="search-hotel">
         <h2 class="search-hotel-text">Заинтересовались?</h2>
-        <p class="search-hotel-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button button-search-hotel button-brown" href="catalog.html">Поиск гостинницы в Седоне</a>
+        <p class="search-hotel-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="button button-search-hotel button-brown" href="catalog.html">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe index-subscribe">
         <div class="subscribe-text">
@@ -134,8 +140,10 @@
           <p class="subscribe-paragraph">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         </div>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-input" type="email" name="mailing-list-email placeholder"="Ваш e-mail">
-            <button class="button subscription-button button-blue" type="submit">Подписаться</button>
+            <label>
+              <input class="subscribe-input" type="email" name="mailing-list-email" placeholder="Ваш e-mail">
+            </label>
+              <button class="button subscription-button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
     </main>
